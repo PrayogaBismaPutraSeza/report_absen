@@ -14,61 +14,119 @@ class _loginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Login"), backgroundColor: Colors.grey),
-      body: SingleChildScrollView(
-        child: Container(
-          height: MediaQuery.of(context).size.height - 100,
-          alignment: Alignment.bottomCenter,
+      appBar: AppBar(
+          title: Text(
+            "Login",
+            style: TextStyle(color: Colors.white),
+          ),
+          backgroundColor: Colors.lightBlue[900]),
+      body: Container(
+        color: Colors.grey[200],
+        child: SingleChildScrollView(
           child: Container(
             height: MediaQuery.of(context).size.height - 100,
             alignment: Alignment.bottomCenter,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Spacer(),
-                Form(
-                  child: Column(
-                    children: [
-                      TextFormField(
-                        controller: usernameTextEditingController,
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          hintText: 'username',
-                        ),
-                      ),
-                      TextFormField(
-                        controller: usernameTextEditingController,
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          hintText: 'username',
-                        ),
-                      ),
-                    ],
+            child: Container(
+              height: MediaQuery.of(context).size.height - 100,
+              alignment: Alignment.bottomCenter,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Spacer(),
+                  Container(
+                    alignment: Alignment.bottomCenter,
+                    child: Text(
+                        "Selamat Datang di Aplikasi Pelaporan Kendala Mesin Absensi"),
                   ),
-                ),
-                SizedBox(
-                  height: 8,
-                ),
-                GestureDetector(
-                  onTap: () {},
-                  child: Container(
-                    alignment: Alignment.center,
-                    width: MediaQuery.of(context).size.width,
-                    padding: EdgeInsets.symmetric(vertical: 20),
+                  Container(
+                    padding: EdgeInsets.symmetric(vertical: 20, horizontal: 50),
+                    margin: EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      border: Border.all(
+                        borderRadius: BorderRadius.circular(20),
                         color: Colors.white,
-                        width: 2,
+                        border: Border.all(
+                          color: Colors.grey,
+                        )),
+                    child: Form(
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              TextButton(
+                                style: TextButton.styleFrom(
+                                  backgroundColor: Colors.grey[50],
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                ),
+                                onPressed: () {},
+                                child: Text(
+                                  "Admin",
+                                  style: TextStyle(color: Colors.black),
+                                ),
+                              ),
+                              TextButton(
+                                style: TextButton.styleFrom(
+                                  backgroundColor: Colors.grey[50],
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20),
+                                  ),
+                                ),
+                                onPressed: () {},
+                                child: Text(
+                                  "User",
+                                  style: TextStyle(color: Colors.black),
+                                ),
+                              ),
+                            ],
+                          ),
+                          TextFormField(
+                            controller: usernameTextEditingController,
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              hintText: 'username',
+                            ),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                          TextFormField(
+                            controller: passwordTextEditingController,
+                            obscureText: true,
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              hintText: 'password ',
+                            ),
+                          ),
+                        ],
                       ),
-                      borderRadius: BorderRadius.circular(30),
                     ),
-                    child: Text("Sign In"),
                   ),
-                ),
-                SizedBox(
-                  height: 200,
-                ),
-              ],
+                  SizedBox(
+                    height: 8,
+                  ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Container(
+                      alignment: Alignment.center,
+                      width: MediaQuery.of(context).size.width,
+                      padding: EdgeInsets.symmetric(vertical: 20),
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.lightBlue,
+                          width: 2,
+                        ),
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      child: Text("Login"),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 200,
+                  ),
+                ],
+              ),
             ),
           ),
         ),
