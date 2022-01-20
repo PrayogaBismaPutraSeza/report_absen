@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Report',
-      theme: ThemeData(primaryColor: Colors.grey),
+      theme: ThemeData(primaryColor: Colors.grey[100]),
       home: LoginScreen(),
     );
   }
