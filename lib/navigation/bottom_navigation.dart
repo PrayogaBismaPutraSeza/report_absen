@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:report_absen/view/form_screen.dart';
 import 'package:report_absen/view/home.dart';
 import 'package:report_absen/view/status_screen.dart';
 
@@ -13,7 +14,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   int _selectedNavbar = 0;
 
   final List<Widget> _widgetOptions = [
-    HomeScreen(),
+    FormScreen(),
     StatusScreen()
   ];
 
