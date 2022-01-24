@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:report_absen/view/form_screen.dart';
 import 'package:report_absen/view/login_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -23,7 +24,13 @@ class _HomeScreenState extends State<HomeScreen> {
                  width: 195,
                  height: 195,
                  child: RaisedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => FormScreen()),
+                      );
+                    },
                     color: Colors.lightBlue[900],
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(100)),

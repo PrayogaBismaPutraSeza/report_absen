@@ -18,37 +18,30 @@ class _loginScreenState extends State<LoginScreen> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-          title: Text(
-            "Login",
-            style: TextStyle(color: Colors.white),
-          ),
+          title: Text("Login",style: TextStyle(color: Colors.white),),
           backgroundColor: Colors.lightBlue[900]),
       body: SingleChildScrollView(
         child: Container(
           color: Colors.grey[200],
-          height: MediaQuery.of(context).size.height - 100,
           alignment: Alignment.bottomCenter,
           child: Container(
             padding: EdgeInsets.symmetric(horizontal: 24),
             child: Column(
-              mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 SizedBox(
-                  height: 10,
+                  height: 35,
                 ),
-                Spacer(),
+                Image.asset('/images/logo1.png', width: 125, height: 125,),
+                SizedBox(
+                  height: 30,
+                ),
                 Container(
-                  width: 100,
-                  height: 100,
-                  child: Image.asset('/images/logo1.png'),
+                  padding: EdgeInsets.only(left: 140, right: 140),
+                  child: Text(
+                      "Selamat Datang di Aplikasi Pelaporan Kendala Mesin Absensi",textAlign: TextAlign.center,),
                 ),
                 SizedBox(
-                  height: 15,
-                ),
-                Container(
-                  alignment: Alignment.bottomCenter,
-                  child: Text(
-                      "Selamat Datang di Aplikasi Pelaporan Kendala Mesin Absensi"),
+                  height: 20,
                 ),
                 Container(
                   padding: EdgeInsets.symmetric(vertical: 20, horizontal: 50),
@@ -93,6 +86,9 @@ class _loginScreenState extends State<LoginScreen> {
                             ),
                           ],
                         ),
+                        SizedBox(
+                          height: 10,
+                        ),
                         TextFormField(
                           controller: usernameTextEditingController,
                           decoration: InputDecoration(
@@ -101,7 +97,7 @@ class _loginScreenState extends State<LoginScreen> {
                           ),
                         ),
                         SizedBox(
-                          height: 8,
+                          height: 10,
                         ),
                         TextFormField(
                           controller: passwordTextEditingController,
@@ -116,7 +112,7 @@ class _loginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 SizedBox(
-                  height: 8,
+                  height: 10,
                 ),
                 GestureDetector(
                   onTap: () {
@@ -142,37 +138,22 @@ class _loginScreenState extends State<LoginScreen> {
                 SizedBox(
                   height: 50,
                 ),
-                Container(
-                  child: Column(
-                    children: [
-                      Column(
-                        children: [
-                          Container(
-                            child: Text('Powered by'),
-                          ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                  width: 100,
-                                  height: 100,
-                                  child: Image.asset('/images/logo2.png')),
-                              Container(
-                                  width: 100,
-                                  height: 100,
-                                  child: Image.asset('/images/logo3.png')),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 200,
+                Column(
+                  children: [
+                    Column(
+                      children: [
+                        Text('Powered by', style: TextStyle(fontWeight: FontWeight.w900, color: Colors.grey[700]),),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset('/images/logo2.png', width:60, height:60,),
+                            Image.asset('/images/kominfo.png', width: 90, height: 90,),
+                            Image.asset('/images/logo3.png', width: 120, height: 120,),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
               ],
             ),
