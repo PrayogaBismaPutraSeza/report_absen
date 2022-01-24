@@ -21,32 +21,27 @@ class _loginScreenState extends State<LoginScreen> {
             style: TextStyle(color: Colors.white),
           ),
           backgroundColor: Colors.lightBlue[900]),
-      body: Container(
-        color: Colors.grey[200],
+      body: SingleChildScrollView(
         child: Container(
+          color: Colors.grey[200],
           height: MediaQuery.of(context).size.height - 100,
           alignment: Alignment.bottomCenter,
           child: Container(
-            height: MediaQuery.of(context).size.height - 100,
-            alignment: Alignment.bottomCenter,
+            padding: EdgeInsets.symmetric(horizontal: 24),
             child: Column(
               mainAxisSize: MainAxisSize.min,
-              children: [
+              children: <Widget>[
                 SizedBox(
                   height: 10,
                 ),
                 Spacer(),
                 Container(
                   width: 100,
-                    height: 100,
-                  child: Column(
-                    children: [
-                      Image.asset('/images/logo1.png'),
-                    ],
-                  ),
+                  height: 100,
+                  child: Image.asset('/images/logo1.png'),
                 ),
                 SizedBox(
-                          height: 15,
+                  height: 15,
                 ),
                 Container(
                   alignment: Alignment.bottomCenter,
@@ -140,31 +135,33 @@ class _loginScreenState extends State<LoginScreen> {
                 SizedBox(
                   height: 50,
                 ),
-                Container(                    
+                Container(
                   child: Column(
-                    children: [Column(
-                      children: [
-                        Container(
-                          child: Text('Powered by'),
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Container(
-                              width: 100,
-                              height: 100,
-                              child: Image.asset('/images/logo2.png')),
-                            Container(
-                              width: 100,
-                              height: 100,
-                              child: Image.asset('/images/logo3.png')),
-                          ],
-                        ),
-                      ],
-                    ),], 
+                    children: [
+                      Column(
+                        children: [
+                          Container(
+                            child: Text('Powered by'),
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                  width: 100,
+                                  height: 100,
+                                  child: Image.asset('/images/logo2.png')),
+                              Container(
+                                  width: 100,
+                                  height: 100,
+                                  child: Image.asset('/images/logo3.png')),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
                 SizedBox(
