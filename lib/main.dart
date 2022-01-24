@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Report',
       theme: ThemeData(primaryColor: Colors.grey[100]),
-      home: BottomNavBar(),
+      home: LoginScreen(),
     );
   }
 }

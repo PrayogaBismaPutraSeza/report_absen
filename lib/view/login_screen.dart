@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:report_absen/navigation/bottom_navigation.dart';
+import 'package:report_absen/view/home.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -117,7 +119,12 @@ class _loginScreenState extends State<LoginScreen> {
                   height: 8,
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => BottomNavBar()));
+                  },
                   child: Container(
                     alignment: Alignment.center,
                     width: MediaQuery.of(context).size.width,
