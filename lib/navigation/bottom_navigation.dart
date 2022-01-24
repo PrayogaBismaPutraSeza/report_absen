@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:report_absen/view/home.dart';
 import 'package:report_absen/view/login_screen.dart';
+import 'package:report_absen/view/status_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
-  const BottomNavBar({ Key? key }) : super(key: key);
+  const BottomNavBar({Key? key}) : super(key: key);
 
   @override
   _BottomNavBarState createState() => _BottomNavBarState();
@@ -14,7 +15,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   final List<Widget> _widgetOptions = [
     HomeScreen(),
-    LoginScreen(),
+    StatusScreen(),
   ];
 
   void _changeSelectedNavBar(int index) {
@@ -26,8 +27,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: _widgetOptions[_selectedNavbar],
-        bottomNavigationBar: BottomNavigationBar(
+      body: _widgetOptions[_selectedNavbar],
+      bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
