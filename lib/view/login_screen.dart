@@ -7,10 +7,8 @@ class LoginScreen extends StatefulWidget {
   _loginScreenState createState() => _loginScreenState();
 }
 
-TextEditingController usernameTextEditingController =
-    new TextEditingController();
-TextEditingController passwordTextEditingController =
-    new TextEditingController();
+TextEditingController usernameTextEditingController = new TextEditingController();
+TextEditingController passwordTextEditingController = new TextEditingController();
 
 class _loginScreenState extends State<LoginScreen> {
   @override
@@ -94,6 +92,7 @@ class _loginScreenState extends State<LoginScreen> {
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             hintText: 'username',
+                            filled: true,
                           ),
                         ),
                         SizedBox(
@@ -105,6 +104,7 @@ class _loginScreenState extends State<LoginScreen> {
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
                             hintText: 'password ',
+                            filled: true,
                           ),
                         ),
                       ],
