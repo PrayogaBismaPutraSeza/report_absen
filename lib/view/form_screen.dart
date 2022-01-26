@@ -20,6 +20,7 @@ class _FormScreenState extends State<FormScreen> {
       appBar: AppBar(title: Text("FORM LAPORAN"), backgroundColor: Colors.lightBlue[900],),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
               padding: EdgeInsets.symmetric(vertical: 30, horizontal: 60),
@@ -27,17 +28,17 @@ class _FormScreenState extends State<FormScreen> {
               decoration: BoxDecoration(
                 
                 borderRadius: BorderRadius.circular(20),
-                  color: Colors.white,
-                  border: Border.all(
-                    color: Colors.grey.shade500,
-                  ),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.shade400,
-                      spreadRadius: 0.5,
-                       blurRadius: 0.5,
-                    )
-                  ],
+                color: Colors.white,
+                border: Border.all(
+                  color: Colors.grey.shade500,
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.shade400,
+                    spreadRadius: 0.5,
+                     blurRadius: 0.5,
+                  )
+                ],
               ),
               child: Form(
                 child: Column(

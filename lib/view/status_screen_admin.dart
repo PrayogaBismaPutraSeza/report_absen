@@ -14,57 +14,87 @@ class _StatusScreenAdminState extends State<StatusScreenAdmin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
+      appBar: AppBar(title: Text("STATUS - ADMIN"), backgroundColor: Colors.lightBlue[900],),
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              alignment: Alignment.centerRight,
-              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 50),
+              padding: EdgeInsets.symmetric(vertical: 30, horizontal: 20),
               margin: EdgeInsets.all(20),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.white,
+                border: Border.all(
+                  color: Colors.grey.shade500,
+                ),
+                boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.shade400,
+                      spreadRadius: 0.5,
+                      blurRadius: 0.5,
+                    )
+                  ],
+              ),
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                  color: Colors.grey.shade50,
                   border: Border.all(
-                    color: Colors.grey,
-                  )),
-              child: DataTable(
-                columns: <DataColumn>[
-                  DataColumn(label: Text("PELAPOR")),
-                  DataColumn(label: Text("FOTO")),
-                  DataColumn(label: Text("KETERANGAN")),
-                  DataColumn(label: Text("STATUS")),
-                ],
-                rows: <DataRow>[
-                  DataRow(
-                    cells: <DataCell>[
-                      DataCell(Text("KOMINFO")),
-                      DataCell(Icon(Icons.image)),
-                      DataCell(Text("Keterangan Kerusakan")),
-                      DataCell(
-                        DropdownButton<String>(
-                          value: dropdownvalue,
-                          icon: Icon(Icons.keyboard_arrow_down),
-                          onChanged: (
-                            String? newValue,
-                          ) {
-                            setState(() {
-                              dropdownvalue = newValue!;
-                            });
-                          },
-                          items: items.map((String items) {
-                            return DropdownMenuItem(
-                                value: items,
-                                child: Text(
-                                  items,
-                                ));
-                          }).toList(),
-                        ),
+                    color: Colors.grey.shade500,
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.shade400,
+                      spreadRadius: 0.5,
+                      blurRadius: 0.5,
+                    )
+                  ],
+                ),
+                // child: Row(
+                //   children: [
+
+                //   ],
+                // ),
+                child: Container(
+                  child: DataTable(
+                    columns: <DataColumn>[
+                      DataColumn(label: Text("PELAPOR")),
+                      DataColumn(label: Text("FOTO")),
+                      DataColumn(label: Text("KETERANGAN")),
+                      DataColumn(label: Text("STATUS")),
+                    ],
+                    rows: <DataRow>[
+                      DataRow(
+                        cells: <DataCell>[
+                          DataCell(Text("KOMINFO")),
+                          DataCell(Icon(Icons.image)),
+                          DataCell(Text("Keterangan Kerusakan")),
+                          DataCell(
+                            DropdownButton<String>(
+                              value: dropdownvalue,
+                              icon: Icon(Icons.keyboard_arrow_down),
+                              onChanged: (
+                                String? newValue,
+                              ) {
+                                setState(() {
+                                  dropdownvalue = newValue!;
+                                });
+                              },
+                              items: items.map((String items) {
+                                return DropdownMenuItem(
+                                    value: items,
+                                    child: Text(
+                                      items,
+                                    ));
+                              }).toList(),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
-                ],
+                ),
               ),
             ),
           ],
