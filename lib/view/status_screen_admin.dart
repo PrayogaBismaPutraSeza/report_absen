@@ -51,11 +51,6 @@ class _StatusScreenAdminState extends State<StatusScreenAdmin> {
                     )
                   ],
                 ),
-                // child: Row(
-                //   children: [
-
-                //   ],
-                // ),
                 child: Container(
                   child: DataTable(
                     columns: <DataColumn>[
